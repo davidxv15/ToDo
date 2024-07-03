@@ -1,3 +1,4 @@
+// import statements
 import React from 'react';
 
 // Functional component
