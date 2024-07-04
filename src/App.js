@@ -1,9 +1,9 @@
 // Import statements: Here we import React and hooks (useState, useEffect) from 'react', and components from their respective files.
-import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import TodoForm from './components/TodoForm';
-import TodoList from './components/TodoList';
-import Footer from './components/Footer';
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
+import Footer from "./components/Footer";
 
 // Main App component: This is the root component that ties all other components together.
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
 
   // useEffect hook: This hook runs once after the initial render to load todos from localStorage (if any).
   useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem('todos'));
+    const storedTodos = JSON.parse(localStorage.getItem("todos"));
     if (storedTodos) {
       setTodos(storedTodos); // If there are todos in localStorage, update the state with them.
     }
@@ -20,7 +20,7 @@ const App = () => {
 
   // useEffect hook: This hook runs every time the 'todos' state changes to save the current todos to localStorage.
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos)); // Save the todos to localStorage as a JSON string.
+    localStorage.setItem("todos", JSON.stringify(todos)); // Save the todos to localStorage as a JSON string.
   }, [todos]); // Dependency array with 'todos' means this effect runs whenever 'todos' changes.
 
   // Function to add a new todo: Takes a todo object as a parameter and updates the state with the new list of todos.
