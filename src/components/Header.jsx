@@ -1,5 +1,6 @@
 // import statements
 import React from 'react';
+import "./Header.css";
 
 // Functional component
 const Header = () => {

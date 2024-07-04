@@ -1,5 +1,6 @@
 // Import statements
 import React from 'react';
+import "./Footer.css"
 
 // Functional component
 const Footer = () => {

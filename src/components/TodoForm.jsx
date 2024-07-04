@@ -1,5 +1,6 @@
 // Import statements
 import React, { useState } from 'react';
+import "./TodoForm.css"
 
 // Functional component
 const TodoForm = ({ addTodo }) => {

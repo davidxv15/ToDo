@@ -1,5 +1,6 @@
 // Import statements
 import React from 'react';
+import "./TodoList.css";
 import TodoItem from './TodoItem';
 
 // Functional component
