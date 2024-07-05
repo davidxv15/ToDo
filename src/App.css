@@ -13,11 +13,12 @@ body {
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
+  width: 80%;
 }
 
 /* App Container */
 .app {
-  max-width: 600px;
+  /* max-width: 500px; */
   margin: 50px auto;
   padding: 20px;
   background: #fff;

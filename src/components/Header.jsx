@@ -6,7 +6,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <header>
-      <h1>Todo App</h1>
+      <h1>To-do App</h1>
     </header>
   );
 };

@@ -8,6 +8,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: blue;
     background: #f4f4f4;
     margin-bottom: 10px;
     padding: 10px;
@@ -16,7 +17,7 @@ ul {
   }
   
   li button {
-    background: #df0b20;
+    background: #ca2838;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -25,5 +26,5 @@ ul {
   }
   
   li button:hover {
-    background: #c82333;
+    background: #72262e;
   }

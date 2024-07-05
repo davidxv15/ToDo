@@ -1,14 +1,22 @@
-// Import statements
+// components/TodoList.jsx
 import React from 'react';
-import "./TodoList.css";
 import TodoItem from './TodoItem';
+import './TodoList.css'
 
-// Functional component
+// Functional component TodoList that maps over the list of todos and renders TodoItem for each todo
 const TodoList = ({ todos, removeTodo }) => {
   return (
     <ul>
       {todos.map((todo, index) => (
-        <TodoItem key={index} index={index} todo={todo} removeTodo={removeTodo} />
+        <TodoItem
+          key={index}
+          index={index}
+          text={todo.text}
+          completed={todo.completed}
+          priority={todo.priority}
+          dueDate={todo.dueDate}
+          removeTodo={removeTodo}
+        />
       ))}
     </ul>
   );
