@@ -4,7 +4,7 @@ import TodoItem from './TodoItem';
 import './TodoList.css'
 
 // Functional component TodoList that maps over the list of todos and renders TodoItem for each todo
-const TodoList = ({ todos, removeTodo }) => {
+const TodoList = ({ todos, removeTodo, toggleComplete }) => {
   return (
     <ul>
       {todos.map((todo, index) => (
@@ -16,6 +16,7 @@ const TodoList = ({ todos, removeTodo }) => {
           priority={todo.priority}
           dueDate={todo.dueDate}
           removeTodo={removeTodo}
+          toggleComplete={toggleComplete}
         />
       ))}
     </ul>

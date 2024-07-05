@@ -33,6 +33,16 @@ const App = () => {
     setTodos(todos.filter((_, i) => i !== index)); // Remove the todo at the given index.
   };
 
+  // Function to toggle the 'completed' status of a todo item: Takes the index of the todo to be toggled.
+  // Creates a copy of the current todos array using the spread operator to avoid direct state mutation.
+  // Flips the 'completed' status of the specified todo item by accessing it via its index and updating the 'completed' property.
+  // Updates the state with the new array of todos using the setTodos function.
+  const toggleComplete = (index) => {
+    const newTodos = [...todos];
+    newTodos[index].completed = !newTodos[index].completed;
+    setTodos(newTodos);
+  };
+
   // JSX to render the component: This is what will be rendered to the DOM.
   return (
     <div className="app">
@@ -41,7 +51,11 @@ const App = () => {
       {/* TodoForm component: Handles the creation of new todos. */}
       <TodoForm addTodo={addTodo} />
       {/* TodoList component: Displays the list of todos and passes down the removeTodo function. */}
-      <TodoList todos={todos} removeTodo={removeTodo} />
+      <TodoList
+        todos={todos}
+        removeTodo={removeTodo}
+        toggleComplete={toggleComplete}
+      />
       {/* Footer component: Displays the footer of the app. */}
       <Footer />
     </div>
