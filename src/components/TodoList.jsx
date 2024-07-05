@@ -1,7 +1,7 @@
 // components/TodoList.jsx
-import React from 'react';
-import TodoItem from './TodoItem';
-import './TodoList.css'
+import React from "react";
+import TodoItem from "./TodoItem";
+import "./TodoList.css";
 
 // Functional component TodoList that maps over the list of todos and renders TodoItem for each todo
 const TodoList = ({ todos, removeTodo, toggleComplete }) => {
