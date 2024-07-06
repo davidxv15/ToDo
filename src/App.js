@@ -12,16 +12,27 @@ const App = () => {
 
   // useEffect hook: This hook runs once after the initial render to load todos from localStorage (if any).
   useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem("todos"));
+    const storedTodos = localStorage.getItem("todos");
+    console.log('Retrieved storedTodos from localStorage:', storedTodos); 
     if (storedTodos) {
-      setTodos(storedTodos); // If there are todos in localStorage, update the state with them.
+      const parsedTodos = JSON.parse(storedTodos);
+      console.log('Parsed storedTodos:', parsedTodos); 
+      setTodos(parsedTodos); // If there are todos in localStorage, update the state with them.
+      console.log('State after setting todos:', parsedTodos);
     }
   }, []); // Empty dependency array means this effect runs only once, similar to componentDidMount in class components.
 
   // useEffect hook: This hook runs every time the 'todos' state changes to save the current todos to localStorage.
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos)); // Save the todos to localStorage as a JSON string.
+    try {
+      const todosString = JSON.stringify(todos);
+      console.log('Saving todos to localStorage:', todosString); // Debugging log
+      localStorage.setItem('todos', todosString);
+    } catch (error) {
+      console.error('Error saving todos to localStorage:', error); // Debugging log
+    }
   }, [todos]); // Dependency array with 'todos' means this effect runs whenever 'todos' changes.
+
 
   // Function to add a new todo: Takes a todo object as a parameter and updates the state with the new list of todos.
   const addTodo = (todo) => {
@@ -30,7 +41,10 @@ const App = () => {
 
   // Function to remove a todo: Takes the index of the todo to be removed and updates the state with the filtered list of todos.
   const removeTodo = (index) => {
-    setTodos(todos.filter((_, i) => i !== index)); // Remove the todo at the given index.
+    const newTodos = todos.filter((_, i) => i !== index);
+    console.log('State after removing todo:', newTodos); // Debugging log
+    setTodos(newTodos); // Remove the todo at the given index.
+
   };
 
   // Function to toggle the 'completed' status of a todo item: Takes the index of the todo to be toggled.

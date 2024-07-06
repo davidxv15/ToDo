@@ -12,6 +12,7 @@ const TodoItem = ({
   removeTodo,
   toggleComplete,
 }) => {
+  console.log('Rendering TodoItem:', { text, completed, priority, dueDate }); 
   return (
     <li>
       {/* Display the todo text */}

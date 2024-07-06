@@ -5,6 +5,7 @@ import "./TodoList.css";
 
 // Functional component TodoList that maps over the list of todos and renders TodoItem for each todo
 const TodoList = ({ todos, removeTodo, toggleComplete }) => {
+  console.log('Rendering TodoList with todos:', todos);
   return (
     <ul>
       {todos.map((todo, index) => (
