@@ -24,19 +24,16 @@ const App = () => {
 
   // useEffect hook: This hook runs every time the 'todos' state changes to save the current todos to localStorage.
   useEffect(() => {
-    try {
-      const todosString = JSON.stringify(todos);
-      console.log('Saving todos to localStorage:', todosString); // Debugging log
-      localStorage.setItem('todos', todosString);
-    } catch (error) {
-      console.error('Error saving todos to localStorage:', error); // Debugging log
-    }
+    const todosString = JSON.stringify(todos);
+    console.log('Saving todos to localStorage:', todosString); // Debugging log
+    localStorage.setItem('todos', todosString);
   }, [todos]); // Dependency array with 'todos' means this effect runs whenever 'todos' changes.
-
 
   // Function to add a new todo: Takes a todo object as a parameter and updates the state with the new list of todos.
   const addTodo = (todo) => {
-    setTodos([...todos, todo]); // Add the new todo to the existing list of todos.
+    const newTodos = [...todos, todo];
+    console.log('Adding new todo:', newTodos); // Debugging log
+    setTodos(newTodos); // Add the new todo to the existing list of todos.
   };
 
   // Function to remove a todo: Takes the index of the todo to be removed and updates the state with the filtered list of todos.
@@ -44,7 +41,6 @@ const App = () => {
     const newTodos = todos.filter((_, i) => i !== index);
     console.log('State after removing todo:', newTodos); // Debugging log
     setTodos(newTodos); // Remove the todo at the given index.
-
   };
 
   // Function to toggle the 'completed' status of a todo item: Takes the index of the todo to be toggled.
@@ -54,6 +50,7 @@ const App = () => {
   const toggleComplete = (index) => {
     const newTodos = [...todos];
     newTodos[index].completed = !newTodos[index].completed;
+    console.log('State after toggling todo:', newTodos); // Debugging log
     setTodos(newTodos);
   };
 
@@ -78,3 +75,4 @@ const App = () => {
 
 // Export the App component as the default export: This allows it to be imported in other files.
 export default App;
+
