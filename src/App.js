@@ -24,11 +24,12 @@ const App = () => {
 
   // useEffect hook: This hook runs every time the 'todos' state changes to save the current todos to localStorage.
   useEffect(() => {
-    if (todos.length > 0) {  // Add this check to avoid saving an empty array initially
-      console.log('Todos before saving to localStorage:', todos); // Debugging log
+    if (todos.length > 0) {
+      // Add this check to avoid saving an empty array initially
+      console.log("Todos before saving to localStorage:", todos); // Debugging log
       const todosString = JSON.stringify(todos);
-      console.log('Saving todos to localStorage:', todosString); // Debugging log
-      localStorage.setItem('todos', todosString);
+      console.log("Saving todos to localStorage:", todosString); // Debugging log
+      localStorage.setItem("todos", todosString);
     }
   }, [todos]); // Dependency array with 'todos' means this effect runs whenever 'todos' changes.
 
