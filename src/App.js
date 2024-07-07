@@ -13,33 +13,36 @@ const App = () => {
   // useEffect hook: This hook runs once after the initial render to load todos from localStorage (if any).
   useEffect(() => {
     const storedTodos = localStorage.getItem("todos");
-    console.log('Retrieved storedTodos from localStorage:', storedTodos); 
+    console.log("Retrieved storedTodos from localStorage:", storedTodos);
     if (storedTodos) {
       const parsedTodos = JSON.parse(storedTodos);
-      console.log('Parsed storedTodos:', parsedTodos); 
+      console.log("Parsed storedTodos:", parsedTodos);
       setTodos(parsedTodos); // If there are todos in localStorage, update the state with them.
-      console.log('State after setting todos:', parsedTodos);
+      console.log("State after setting todos:", parsedTodos);
     }
   }, []); // Empty dependency array means this effect runs only once, similar to componentDidMount in class components.
 
   // useEffect hook: This hook runs every time the 'todos' state changes to save the current todos to localStorage.
   useEffect(() => {
-    const todosString = JSON.stringify(todos);
-    console.log('Saving todos to localStorage:', todosString); // Debugging log
-    localStorage.setItem('todos', todosString);
+    if (todos.length > 0) {  // Add this check to avoid saving an empty array initially
+      console.log('Todos before saving to localStorage:', todos); // Debugging log
+      const todosString = JSON.stringify(todos);
+      console.log('Saving todos to localStorage:', todosString); // Debugging log
+      localStorage.setItem('todos', todosString);
+    }
   }, [todos]); // Dependency array with 'todos' means this effect runs whenever 'todos' changes.
 
   // Function to add a new todo: Takes a todo object as a parameter and updates the state with the new list of todos.
   const addTodo = (todo) => {
     const newTodos = [...todos, todo];
-    console.log('Adding new todo:', newTodos); // Debugging log
+    console.log("Adding new todo:", newTodos); // Debugging log
     setTodos(newTodos); // Add the new todo to the existing list of todos.
   };
 
   // Function to remove a todo: Takes the index of the todo to be removed and updates the state with the filtered list of todos.
   const removeTodo = (index) => {
     const newTodos = todos.filter((_, i) => i !== index);
-    console.log('State after removing todo:', newTodos); // Debugging log
+    console.log("State after removing todo:", newTodos); // Debugging log
     setTodos(newTodos); // Remove the todo at the given index.
   };
 
@@ -50,7 +53,7 @@ const App = () => {
   const toggleComplete = (index) => {
     const newTodos = [...todos];
     newTodos[index].completed = !newTodos[index].completed;
-    console.log('State after toggling todo:', newTodos); // Debugging log
+    console.log("State after toggling todo:", newTodos); // Debugging log
     setTodos(newTodos);
   };
 
@@ -75,4 +78,3 @@ const App = () => {
 
 // Export the App component as the default export: This allows it to be imported in other files.
 export default App;
-
