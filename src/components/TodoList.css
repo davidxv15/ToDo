@@ -1,14 +1,15 @@
 ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-left: 10%;
+    margin: auto;
+    /* padding: auto; */
+    padding-left: 5%;
     align-items: center;
-    left: 20px;
+    place-content: center;
   }
   
   li {
     display: flex;
+    place-content: center;
     justify-content: space-between;
     align-items: center;
     align-content: center;
@@ -19,7 +20,7 @@ ul {
     padding: 10px 10px;
     border: 1px solid #706969;
     border-radius: 10px;
-    width: 80%;
+    width: 90%;
     
   }
   
