@@ -29,7 +29,7 @@ const TodoItem = ({
       {/* Display the due date */}
       <span>Due: {dueDate}</span>
 
-      <button onClick={() => toggleComplete(index)}>
+      <button style={{ backgroundColor: "black" }} onClick={() => toggleComplete(index)}>
         {completed ? 'Mark as Incomplete' : 'Mark as Complete'}
       </button>
 
