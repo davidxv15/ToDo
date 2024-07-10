@@ -22,14 +22,20 @@ li .task-text {
   flex: 2; /* Adjust flex values based on your layout needs */
 }
 
-li .completion-status,
-li .priority
+li .completion-status
+/* li .priority */
 /* li .due-date,
 li .actions  */
 {
   flex: 1;
   text-align: center; /* Center text if needed */
   padding: 2px 70px;
+}
+
+li .priority {
+  flex: 1;
+  text-align: center;
+  padding: 2px 60px;
 }
 
 li .due-date,
