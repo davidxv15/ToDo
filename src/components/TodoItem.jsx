@@ -1,6 +1,6 @@
 // components/TodoItem.jsx
 import React from "react";
-import './TodoItem.css'
+import "./TodoItem.css";
 
 // Functional component TodoItem that receives and displays various props
 const TodoItem = ({
@@ -12,7 +12,7 @@ const TodoItem = ({
   removeTodo,
   toggleComplete,
 }) => {
-  console.log('Rendering TodoItem:', { text, completed, priority, dueDate }); 
+  console.log("Rendering TodoItem:", { text, completed, priority, dueDate });
   return (
     <li>
       {/* Display the todo text */}
@@ -24,13 +24,22 @@ const TodoItem = ({
       <span>{completed ? "✔️" : "❌"}</span>
 
       {/* Display the priority level */}
-      <span>Priority: <span className={priority === 'High' ? 'high-priority' : ''}>{priority}</span></span>
+      <span>
+        Priority:{" "}
+        <span className={priority === "High" ? "high-priority" : 
+        priority === 'Medium' ? 'med-priority' : ""}>
+          {priority}
+        </span>
+      </span>
 
       {/* Display the due date */}
       <span>Due: {dueDate}</span>
 
-      <button style={{ backgroundColor: "black" }} onClick={() => toggleComplete(index)}>
-        {completed ? 'Mark as Incomplete' : 'Mark as Complete'}
+      <button
+        style={{ backgroundColor: "black" }}
+        onClick={() => toggleComplete(index)}
+      >
+        {completed ? "Mark as Incomplete" : "Mark as Complete"}
       </button>
 
       {/* Button to remove the todo item */}

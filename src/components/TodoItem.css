@@ -1,4 +1,7 @@
 .high-priority {
-    color: red;
+    color: rgb(211, 18, 18);
   }
-  
+
+.med-priority {
+  color: rgb(221, 160, 17);
+}
