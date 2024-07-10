@@ -18,15 +18,21 @@ li span {
   margin-right: 10px; /* Optional: Add some space between spans */
 }
 
-/* Ensure specific spans are given enough width */
 li .task-text {
   flex: 2; /* Adjust flex values based on your layout needs */
 }
 
 li .completion-status,
-li .priority,
-li .due-date,
-li .actions {
+li .priority
+/* li .due-date,
+li .actions  */
+{
   flex: 1;
   text-align: center; /* Center text if needed */
+  padding: 2px 70px;
+}
+
+li .due-date,
+li .actions {
+  padding: 5px 15px;
 }
