@@ -1,6 +1,6 @@
 // components/TodoItem.jsx
 import React from "react";
-// import './TodoItem.css'
+import './TodoItem.css'
 
 // Functional component TodoItem that receives and displays various props
 const TodoItem = ({
@@ -24,7 +24,7 @@ const TodoItem = ({
       <span>{completed ? "✔️" : "❌"}</span>
 
       {/* Display the priority level */}
-      <span>Priority: {priority}</span>
+      <span>Priority: <span className={priority === 'High' ? 'high-priority' : ''}>{priority}</span></span>
 
       {/* Display the due date */}
       <span>Due: {dueDate}</span>
