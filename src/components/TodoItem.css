@@ -35,7 +35,7 @@ li .actions {
 /* li .priority, */
 li .due-date {
   padding: 2px 20px; /* Uniform padding */
-  margin-right: 5px;
+  margin-right: 15px;
 }
 
 li .completion-status {
@@ -50,4 +50,8 @@ li .priority {
 li .actions {
   display: flex;
   gap: 28px; /* Space between buttons */
+}
+
+li button {
+  width: 85px;
 }

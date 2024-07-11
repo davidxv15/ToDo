@@ -2,7 +2,7 @@ ul {
   list-style: none;
   margin: auto;
   /* padding: auto; */
-  padding-left: 6%;
+  padding-left: 3%;
   align-items: center;
   place-content: center;
 }
@@ -20,7 +20,7 @@ li {
   padding: 10px 10px;
   border: 1px solid #706969;
   border-radius: 10px;
-  width: 90%; /* adjust */
+  width: 95%; /* adjust */
 }
 
 li button {
