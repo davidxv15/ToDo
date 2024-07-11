@@ -35,7 +35,8 @@ li .actions {
 /* li .priority, */
 li .due-date {
   padding: 2px 20px; /* Uniform padding */
-  margin-right: 15px;
+  margin-right: 55px;
+  display: inline;
 }
 
 li .completion-status {
