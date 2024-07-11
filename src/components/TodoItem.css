@@ -1,9 +1,9 @@
 .high-priority {
-    color: rgb(211, 18, 18); /*red bold or animation conveys importance */
-  }
+  color: rgb(211, 18, 18); /* red bold or animation conveys importance */
+}
 
 .med-priority {
-  color: rgb(221, 160, 17); /*orange or yellow conveys medium */
+  color: rgb(221, 160, 17); /* orange or yellow conveys medium */
 }
 
 li {
@@ -20,25 +20,34 @@ li span {
 
 li .task-text {
   flex: 2; /* Adjust flex values based on your layout needs */
+  min-width: 150px; /* Ensure minimum width for consistency */
 }
 
-li .completion-status
-/* li .priority */
-/* li .due-date,
-li .actions  */
-{
+li .completion-status,
+li .priority,
+li .due-date,
+li .actions {
   flex: 1;
   text-align: center; /* Center text if needed */
-  padding: 2px 70px;
+}
+
+/* li .completion-status, */
+/* li .priority, */
+li .due-date {
+  padding: 2px 20px; /* Uniform padding */
+  margin-right: 5px;
+}
+
+li .completion-status {
+  padding-right: 10px;
+  transform: translateX(-50px);
 }
 
 li .priority {
-  flex: 1;
-  text-align: center;
-  padding: 2px 60px;
+  padding: 2px 70px;
 }
 
-li .due-date,
 li .actions {
-  padding: 5px 15px;
+  display: flex;
+  gap: 28px; /* Space between buttons */
 }
