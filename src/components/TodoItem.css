@@ -23,6 +23,7 @@ li span {
 li .task-text {
   flex: 2; /* Adjust  */
   min-width: 150px;
+  font-size: 22px;
 }
 
 li .completion-status,
@@ -43,7 +44,7 @@ li .due-date {
 
 li .completion-status {
   padding-right: 10px;
-  transform: translateX(-50px);
+  transform: translateX(-10px);
 }
 
 li .priority {
