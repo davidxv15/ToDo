@@ -3,7 +3,9 @@
 }
 
 .med-priority {
-  color: rgb(221, 136, 17); /* orange or yellow conveys medium */
+  color: rgb(221, 160, 17); /* orange or yellow conveys medium */
+  -webkit-text-stroke-width: .1px;
+            -webkit-text-stroke-color: black;
 }
 
 li {
@@ -20,7 +22,7 @@ li span {
 
 li .task-text {
   flex: 2; /* Adjust  */
-  min-width: 150px; 
+  min-width: 150px;
 }
 
 li .completion-status,
