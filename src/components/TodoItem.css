@@ -24,6 +24,7 @@ li .task-text {
   flex: 2; /* Adjust  */
   min-width: 110px;
   font-size: 20px;
+  line-height: 20px;
 }
 
 li .completion-status,
