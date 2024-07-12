@@ -37,7 +37,7 @@ const TodoItem = ({
 
       <span className="actions">
       <button
-        style={{ backgroundColor: "black" }}
+        style={{ backgroundColor: "blue" }}
         onClick={() => toggleComplete(index)}
       >
         {completed ? "Mark as Incomplete" : "Mark as Complete"}

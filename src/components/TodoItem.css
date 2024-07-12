@@ -59,4 +59,6 @@ li .actions {
 
 li button {
   width: 85px;
+  color: rgb(30, 64, 238);
 }
+/* In/Complete button styling is inline */
