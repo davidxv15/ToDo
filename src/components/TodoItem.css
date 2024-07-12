@@ -22,8 +22,8 @@ li span {
 
 li .task-text {
   flex: 2; /* Adjust  */
-  min-width: 150px;
-  font-size: 22px;
+  min-width: 110px;
+  font-size: 20px;
 }
 
 li .completion-status,
