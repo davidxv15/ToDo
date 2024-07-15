@@ -42,8 +42,8 @@ li .due-date {
   padding: 2px 20px; /* Uniform padding */
   margin-right: 55px;
   display: inline;
-  width: 77px;
-  color:rgb(40, 34, 19);
+  width: 99px;
+  color:rgb(28, 23, 11);
 }
 
 li .completion-status {

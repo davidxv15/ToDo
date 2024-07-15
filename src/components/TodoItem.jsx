@@ -33,7 +33,7 @@ const TodoItem = ({
       </span>
 
       {/* Display the due date */}
-      <span className="due-date">Due: {dueDate}</span>
+      <span className="due-date" style={{ whiteSpace: "nowrap"}} >Due: {dueDate}</span>
 
       <span className="actions">
       <button
