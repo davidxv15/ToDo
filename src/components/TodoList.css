@@ -20,7 +20,8 @@ li {
   padding: 10px 10px;
   border: 1px solid #706969;
   border-radius: 10px;
-  width: 95%; /* adjust */
+  width: 90%; /* adjust */
+  transform: translateX(20px);
 }
 
 li button {
