@@ -24,7 +24,7 @@ const TodoItem = ({
       <span className="completion-status">{completed ? "✔️" : "❌"}</span>
 
       {/* Display the priority level */}
-      <span className="priority">
+      <span className="priority" style={{ whiteSpace: "nowrap"}} >
         Priority:{" "}
         <span className={priority === "High" ? "high-priority" : 
         priority === 'Medium' ? 'med-priority' : ""}>
