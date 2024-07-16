@@ -16,7 +16,10 @@ const TodoItem = ({
   return (
     <li>
       {/* Display the todo text */}
-      <span className="task-text" style={{ textDecoration: completed ? "line-through" : "none" }}>
+      <span
+        className="task-text"
+        style={{ textDecoration: completed ? "line-through" : "none" }}
+      >
         {text}
       </span>
 
@@ -24,27 +27,36 @@ const TodoItem = ({
       <span className="completion-status">{completed ? "✔️" : "❌"}</span>
 
       {/* Display the priority level */}
-      <span className="priority" style={{ whiteSpace: "nowrap"}} >
+      <span className="priority" style={{ whiteSpace: "nowrap" }}>
         Priority:{" "}
-        <span className={priority === "High" ? "high-priority" : 
-        priority === 'Medium' ? 'med-priority' : ""}>
+        <span
+          className={
+            priority === "High"
+              ? "high-priority"
+              : priority === "Medium"
+              ? "med-priority"
+              : ""
+          }
+        >
           {priority}
         </span>
       </span>
 
       {/* Display the due date */}
-      <span className="due-date" style={{ whiteSpace: "nowrap"}} >Due: {dueDate}</span>
+      <span className="due-date" style={{ whiteSpace: "nowrap" }}>
+        Due: {dueDate}
+      </span>
 
       <span className="actions">
-      <button
-        style={{ backgroundColor: "rgb(122, 12, 23)" }}
-        onClick={() => toggleComplete(index)}
-      >
-        {completed ? "Mark as Incomplete" : "Mark as Complete"}
-      </button>
+        <button
+          style={{ backgroundColor: "rgb(122, 12, 23)" }}
+          onClick={() => toggleComplete(index)}
+        >
+          {completed ? "Mark as Incomplete" : "Mark as Complete"}
+        </button>
 
-      {/* Button to remove the todo item */}
-      <button onClick={() => removeTodo(index)}>Remove</button>
+        {/* Button to remove the todo item */}
+        <button onClick={() => removeTodo(index)}>Remove</button>
       </span>
     </li>
   );
