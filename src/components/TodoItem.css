@@ -71,7 +71,7 @@ li button {
 /* Media Queries for Better Responsiveness */
 @media (max-width: 768px) {
   li {
-    flex-direction: column; /* Stack items vertically on smaller screens */
+    flex-direction: row; /* Stack items vertically on smaller screens */
     align-items: flex-start;
   }
 
@@ -84,6 +84,15 @@ li button {
     width: 100%; /* Make each span take full width */
     margin-bottom: 5px;
     transform: translateX(0px);
+    /* display: inline; */
+  }
+
+  li .task-text, 
+  li .completion-status, 
+  li .priority, 
+  li .due-date {
+    display: inline-block;
+    flex-direction: row;
   }
 
   li .actions {
