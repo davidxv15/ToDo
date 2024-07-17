@@ -42,24 +42,24 @@ li .actions {
 li .due-date {
   padding: 2px 10px; /* Uniform padding */
   color: rgb(28, 23, 11);
-  transform: translateX(-120px); /* Remove transform for better responsiveness */
+  transform: translateX(-120px); /* Adjust position */
 }
 
 li .completion-status {
   padding-right: 10px;
-  transform: translateX(-120px); /* Remove transform for better responsiveness */
+  transform: translateX(-120px); /* Adjust position */
 }
 
 li .priority {
   padding: 2px 10px;
-  transform: translateX(-120px);
+  transform: translateX(-120px); /* Adjust position */
 }
 
 li .actions {
   display: flex;
   gap: 10px; /* Space between buttons */
   transform: translateX(-70px);
-  align-items:baseline;
+  align-items: baseline;
 }
 
 li button {
@@ -71,8 +71,9 @@ li button {
 /* Media Queries for Better Responsiveness */
 @media (max-width: 768px) {
   li {
-    flex-direction: row; /* Stack items vertically on smaller screens */
-    align-items: flex-start;
+    flex-direction: row; /* Keep items in a row on smaller screens */
+    flex-wrap: wrap; /* Allow items to wrap if they overflow */
+    align-items: center;
   }
 
   li .task-text, 
@@ -80,11 +81,11 @@ li button {
   li .priority, 
   li .due-date, 
   li .actions {
+    flex: 1 1 auto; /* Allow flex items to grow and shrink */
     text-align: left;
     width: 100%; /* Make each span take full width */
     margin-bottom: 5px;
-    transform: translateX(0px);
-    /* display: inline; */
+    transform: translateX(0px); /* Remove transform for responsiveness */
   }
 
   li .task-text, 
@@ -93,17 +94,19 @@ li button {
   li .due-date {
     display: inline-block;
     flex-direction: row;
+    text-align: center; /* Center the text */
   }
 
   li .actions {
     flex-direction: row;
     justify-content: flex-start;
+    width: 100%;
     gap: 5px;
     transform: translateX(0px);
   }
 
   li button {
-    width: 100%; /* Make buttons full width on smaller screens */
+    width: auto; /* Allow button width to adjust based on content */
     transform: translateX(0px);
   }
 }
