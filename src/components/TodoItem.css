@@ -5,24 +5,27 @@
 .med-priority {
   color: rgb(221, 160, 17); /* orange or yellow conveys medium */
   -webkit-text-stroke-width: .1px;
-            -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: black;
 }
 
 li {
   display: flex;
-  align-items: center; /* Vertically center items */
-  justify-content: space-between; /* Space out items evenly */
+  flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid #ccc;
-  height: 50px;
+  height: auto; /* Allow height to adjust based on content */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 li span {
-  margin-right: 10px; /*  Add some space between spans */
+  margin-right: 10px; /* Add some space between spans */
+  word-wrap: break-word; /* Allow long words to break to the next line */
 }
 
 li .task-text {
-  flex: 2; /* Adjust  */
+  flex: 2; /* Adjust */
   min-width: 110px;
   font-size: 20px;
   line-height: 20px;
@@ -36,33 +39,59 @@ li .actions {
   text-align: center; /* Center text if needed */
 }
 
-/* li .completion-status, */
-/* li .priority, */
 li .due-date {
-  padding: 2px 20px; /* Uniform padding */
-  margin-right: 55px;
-  display: inline;
-  width: 88px;
-  color:rgb(28, 23, 11);
-  transform: translateX(-35px);
+  padding: 2px 10px; /* Uniform padding */
+  color: rgb(28, 23, 11);
+  transform: translateX(-120px); /* Remove transform for better responsiveness */
 }
 
 li .completion-status {
   padding-right: 10px;
-  transform: translateX(-10px);
+  transform: translateX(-120px); /* Remove transform for better responsiveness */
 }
 
 li .priority {
-  padding: 2px 70px;
+  padding: 2px 10px;
+  transform: translateX(-120px);
 }
 
 li .actions {
   display: flex;
-  gap: 28px; /* Space between buttons */
+  gap: 10px; /* Space between buttons */
+  transform: translateX(-70px);
+  align-items:baseline;
 }
 
 li button {
-  width: 85px;
+  width: auto; /* Allow button width to adjust based on content */
   color: rgb(30, 64, 238);
+  flex-shrink: 0; /* Prevent buttons from shrinking */
 }
-/* In/Complete button styling is inline */
+
+/* Media Queries for Better Responsiveness */
+@media (max-width: 768px) {
+  li {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start;
+  }
+
+  li .task-text, 
+  li .completion-status, 
+  li .priority, 
+  li .due-date, 
+  li .actions {
+    text-align: left;
+    width: 100%; /* Make each span take full width */
+    margin-bottom: 5px;
+  }
+
+  li .actions {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  li button {
+    width: 100%; /* Make buttons full width on smaller screens */
+  }
+}

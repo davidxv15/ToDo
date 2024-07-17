@@ -1,27 +1,25 @@
 ul {
   list-style: none;
   margin: auto;
-  /* padding: auto; */
   padding-left: 3%;
   align-items: center;
   place-content: center;
+  width: 100%;
 }
 
 li {
   display: flex;
-  place-content: center;
+  flex-wrap: wrap; /* Allow items to wrap for smaller screens */
   justify-content: space-between;
   align-items: center;
-  align-content: center;
-  align-self: center;
   color: rgb(21, 21, 109);
   background: #e0e0e0;
   margin-bottom: 10px;
-  padding: 10px 10px;
+  padding: 10px;
   border: 1px solid #706969;
   border-radius: 10px;
-  width: 90%; /* adjust */
-  transform: translateX(20px);
+  width: 90%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 li button {
@@ -31,8 +29,27 @@ li button {
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
+  flex-shrink: 0; /* Prevent buttons from shrinking */
 }
 
 li button:hover {
   background: #72262e;
+}
+
+/* Media Queries for Better Responsiveness */
+@media (max-width: 768px) {
+  li {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start;
+  }
+
+  li span, li button {
+    width: 100%; /* Make each span and button take full width */
+    text-align: left;
+  }
+
+  li .actions {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    width: 100%;
+  }
 }

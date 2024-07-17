@@ -49,6 +49,7 @@ const TodoItem = ({
 
       <span className="actions">
         <button
+        className="in/complete"
           style={{ backgroundColor: "rgb(122, 12, 23)" }}
           onClick={() => toggleComplete(index)}
         >
@@ -56,7 +57,7 @@ const TodoItem = ({
         </button>
 
         {/* Button to remove the todo item */}
-        <button onClick={() => removeTodo(index)}>Remove</button>
+        <button className="remove-btn"onClick={() => removeTodo(index)}>Remove</button>
       </span>
     </li>
   );
