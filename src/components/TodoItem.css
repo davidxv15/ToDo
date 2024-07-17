@@ -83,15 +83,18 @@ li button {
     text-align: left;
     width: 100%; /* Make each span take full width */
     margin-bottom: 5px;
+    transform: translateX(0px);
   }
 
   li .actions {
     flex-direction: row;
     justify-content: flex-start;
     gap: 5px;
+    transform: translateX(0px);
   }
 
   li button {
     width: 100%; /* Make buttons full width on smaller screens */
+    transform: translateX(0px);
   }
 }
