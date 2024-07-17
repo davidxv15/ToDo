@@ -72,8 +72,9 @@ li button {
 @media (max-width: 768px) {
   li {
     flex-direction: row; /* Keep items in a row on smaller screens */
-    flex-wrap: wrap; /* Allow items to wrap if they overflow */
+    flex-wrap: nowrap; /* Allow items to wrap if they overflow */
     align-items: center;
+    justify-content: space-between;
   }
 
   li .task-text, 
@@ -88,14 +89,14 @@ li button {
     transform: translateX(0px); /* Remove transform for responsiveness */
   }
 
-  li .task-text, 
+  /* li .task-text, 
   li .completion-status, 
   li .priority, 
   li .due-date {
-    display: inline-block;
+    display: inline;
     flex-direction: row;
-    text-align: center; /* Center the text */
-  }
+    text-align: center; 
+  } */
 
   li .actions {
     flex-direction: row;
