@@ -39,13 +39,27 @@ li button:hover {
 /* Media Queries for Better Responsiveness */
 @media (max-width: 768px) {
   li {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: flex-start;
+    display: flex;
+    flex-direction: row; /* Keep items in a row */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Distribute space evenly */
   }
+
+  /* li .task-text, 
+  li .completion-status, 
+  li .priority {
+    flex: 1 1 auto; 
+    
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 0; 
+  } */
+
 
   li span, li button {
     width: 100%; /* Make each span and button take full width */
     text-align: center;
+    align-self: center;
   }
 
   li .actions {
