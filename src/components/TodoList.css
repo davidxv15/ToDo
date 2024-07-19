@@ -45,7 +45,7 @@ li button:hover {
     justify-content: space-between; /* Distribute space evenly */
   }
 
-  /* li .task-text, 
+  li .task-text, 
   li .completion-status, 
   li .priority {
     flex: 1 1 auto; 
@@ -53,10 +53,10 @@ li button:hover {
     flex-direction: row;
     flex-wrap: nowrap;
     margin-bottom: 0; 
-  } */
+  }
 
-
-  li span, li button {
+  li span,
+  li button {
     width: 100%; /* Make each span and button take full width */
     text-align: center;
     align-self: center;
