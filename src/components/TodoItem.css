@@ -90,16 +90,6 @@ li button {
     transform: translateX(0px); 
   }
 
-  /* li .task-text, 
-  li .completion-status, 
-  li .priority, 
-  li .due-date {
-    display: inline;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    text-align: center; 
-  } */
-
   li .actions {
     flex-direction: row;
     justify-content: flex-start;
