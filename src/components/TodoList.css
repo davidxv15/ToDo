@@ -38,18 +38,6 @@ li button:hover {
 
 /* Media Queries for Better Responsiveness */
 @media (max-width: 768px) {
-
-
-  li .task-text, 
-  li .completion-status, 
-  li .priority {
-    flex: 1 1 auto; 
-    
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-bottom: 0; 
-  }
-
   li span,
   li button {
     width: 100%; /* Make each span and button take full width */
