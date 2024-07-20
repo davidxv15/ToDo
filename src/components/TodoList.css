@@ -38,12 +38,7 @@ li button:hover {
 
 /* Media Queries for Better Responsiveness */
 @media (max-width: 768px) {
-  li {
-    display: flex;
-    flex-direction: row; /* Keep items in a row */
-    align-items: center; /* Vertically center items */
-    justify-content: space-between; /* Distribute space evenly */
-  }
+
 
   li .task-text, 
   li .completion-status, 
@@ -57,7 +52,7 @@ li button:hover {
 
   li span,
   li button {
-    width: 100%; /* Make each span and button take full width */
+    width: 80%; /* Make each span and button take full width */
     text-align: center;
     align-self: center;
   }
