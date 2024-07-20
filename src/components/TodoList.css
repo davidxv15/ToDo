@@ -41,13 +41,13 @@ li button:hover {
 
   li span,
   li button {
-    width: 100%; /* Make each span and button take full width */
+    width: 90%; /* Make each span and button take full width */
     text-align: center;
     align-self: center;
   }
 
   li .actions {
     flex-direction: column; /* Stack buttons vertically on smaller screens */
-    width: 100%;
+    /* width: 100%; */
   }
 }

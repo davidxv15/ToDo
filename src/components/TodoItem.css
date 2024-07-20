@@ -103,7 +103,7 @@ li button {
   li .actions {
     flex-direction: row;
     justify-content: flex-start;
-    width: 100%;
+    /* width: 100%; */
     gap: 5px;
     transform: translateX(0px);
   }
