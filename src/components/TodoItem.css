@@ -72,9 +72,9 @@ li button {
 /* Media Queries for Better Responsiveness */
 @media (max-width: 768px) {
   li {
-    display: flex;
-    flex-direction: row; /* Keep items in a row on smaller screens */
-    flex-wrap: nowrap; /* Allow items to wrap if they overflow */
+    /* display: inline-flex; */
+    flex-direction: row; 
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
   }
@@ -83,10 +83,9 @@ li button {
   li .completion-status,
   li .priority,
   li .due-date {
+    /* display: inline; */
     flex: 1 1 auto; /* Allow flex items to grow and shrink */
     text-align: center;
-    flex-direction: row;
-    justify-content: flex-start;
     margin-bottom: 5px;
     transform: translateX(0px); 
   }
