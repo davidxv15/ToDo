@@ -38,6 +38,7 @@ li button:hover {
 
 /* Media Queries for Better Responsiveness */
 @media (max-width: 768px) {
+
   li span,
   li button {
     width: 100%; /* Make each span and button take full width */
